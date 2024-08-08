@@ -6,7 +6,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'tsserver','rust_analyzer'},
+  ensure_installed = {'rust_analyzer'},
   -- Replace the language servers listed here 
   -- with the ones you want to install
   handlers = {
