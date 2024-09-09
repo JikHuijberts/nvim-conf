@@ -5,26 +5,10 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
-<<<<<<< HEAD
-=======
   ensure_installed = {'rust_analyzer'},
->>>>>>> c891460fcdbb174b19b516583310c37b8bcdae7d
-  -- Replace the language servers listed here 
-  -- with the ones you want to install
   handlers = {
     lsp_zero.default_setup,
     rust_analyzer = function() end,
-    -- rust_analyzer = function()
-    --   require('lspconfig').rust_analyzer.setup({
-    --       settings = {
-    --         ['rust-analyzer'] ={
-    --             diagnostics= {
-    --                 disabled={"inactive-code"}
-    --             }
-    --         }
-    --       }
-    --   })
-    -- end,
     tailwindcss = function()
         require('lspconfig').tailwindcss.setup({
          -- There add every filetype you want tailwind to work on
